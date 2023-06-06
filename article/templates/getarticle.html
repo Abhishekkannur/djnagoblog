@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{%block title%}Article{%endblock%}
+{%block style%}
+
+{% endblock %}
+
+{%block content%}
+   <div class=""container mt-4>
+    {%for articles in article_lists%}
+        <h1><a class="link-style" href="{% url 'article_details' articles.slug %}">{{articles.title}}</a></h1>
+
+        <span class="badge rounded-pill bg-success">Author:{{articles.author}}</span>
+    {% endfor %}
+
+   </div>
+{%endblock%}

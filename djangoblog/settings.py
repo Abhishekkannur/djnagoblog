@@ -84,12 +84,12 @@ DATABASES = {
         # 'PASSWORD': 'postgres',
         # 'HOST': 'database-1.coyvyvdfmpxf.ap-south-1.rds.amazonaws.com',
         # 'PORT': '5432',
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'article',
-        'USER':'root',
-        'PASSWORD':'56565656',
-        'HOST':'articledb.crgwhkxzx8q3.us-west-2.rds.amazonaws.com',
-        'PORT':3306,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),#"DB_NAME"
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST') ,
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 
